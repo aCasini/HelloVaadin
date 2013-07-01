@@ -1,6 +1,9 @@
 package com.example.hellovaadin.component;
 
+import com.example.hellovaadin.HellovaadinUI;
+import com.example.hellovaadin.views.StartView;
 import com.example.services.MockLogin;
+import com.vaadin.navigator.Navigator;
 import com.vaadin.ui.Button;
 import com.vaadin.ui.Button.ClickEvent;
 import com.vaadin.ui.Button.ClickListener;
@@ -21,6 +24,7 @@ public class LoginBox extends CustomComponent implements ClickListener{
 	private TextField		userName = new TextField("User Name");
 	private PasswordField	passText = new PasswordField("password");
 	private Button			loginBtn = new Button("Login");
+	private Navigator		navigator;
 	
 	public LoginBox(){
 		FormLayout content = new FormLayout();
@@ -29,6 +33,7 @@ public class LoginBox extends CustomComponent implements ClickListener{
 		content.addComponent(loginBtn);
 		loginBtn.addClickListener(this);
 		panel.setContent(content);
+		panel.setId("LoginPanel");
 		//Setting della dimensione del pannello
 		panel.setWidth("300");
 		
@@ -49,12 +54,23 @@ public class LoginBox extends CustomComponent implements ClickListener{
 			Boolean resultLogin = MockLogin.loginAction(usernameValue, passwordValue);
 			if(resultLogin){
 				Notification.show("Login Riuscito correttanebte!!", "login action", Notification.Type.HUMANIZED_MESSAGE);
+				((StartView)getParent()).getNavigator().navigateTo(HellovaadinUI.MAINVIEW);
+//				panel.setVisible(false);
 			}else{
+//				JavaScript.getCurrent().execute("alert('PIPPO')");
 				Notification.show("Utente non abilitato!", Notification.Type.ERROR_MESSAGE);
 			}
 	
 			
 		}
+	}
+
+	public Navigator getNavigator() {
+		return navigator;
+	}
+
+	public void setNavigator(Navigator navigator) {
+		this.navigator = navigator;
 	}
 
 }

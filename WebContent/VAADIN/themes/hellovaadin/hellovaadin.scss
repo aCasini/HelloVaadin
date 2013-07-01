@@ -9,13 +9,13 @@
   @include reindeer;
 
   /* Insert your theme rules here */
-  .v-panel{
+  #LoginPanel.v-panel{
 		margin-left: 600px;
 		margin-top: 300px;
 		position: relative;
    }
  
-  .v-panel .v-panel-caption {
+  #LoginPanel.v-panel .v-panel-caption {
 		/* fallback */
 		background-color: #135d8c;
 		/* Safari 4-5, Chrome 1-9 */
@@ -34,19 +34,49 @@
 		height: 20px;
 	}
 	
-	.v-panel .v-panel-content {
+	#LoginPanel.v-panel #LoginPanel.v-panel-content {
 		width: 100px;
 		height: 130px;
 		
 	}
 	
-	.v-panel .v-textfield {
+	#LoginPanel.v-panel #LoginPanel.v-textfield {
 	background: #e0e0ff; /* pale blue */
 		font-family: helvetica;
 		margin-left: 5px;
 	}
 	
-	.v-panel .v-button {
+	#LoginPanel.v-panel #LoginPanel.v-button {
 	
+	}
+	
+	#PanelMenu.v-panel .v-panel-caption {
+		/* fallback */
+		 background-color: #84b818;
+		/* Safari 4-5, Chrome 1-9 */
+		background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#84b818),to(#2F2727));
+		/* Safari 5.1, Chrome 10+ */
+		background: -webkit-linear-gradient(top, #c2d44c, #84b818);
+		/* Firefox 3.6+ */
+		background: -moz-linear-gradient(top, #c2d44c, #84b818);
+		/* IE 10 */
+		background: -ms-linear-gradient(top, #c2d44c, #84b818);
+		/* Opera 11.10+ */
+		background: -o-linear-gradient(top, #c2d44c, #84b818);
+	}
+	
+	#PanelEqual.v-panel .v-panel-caption {
+		/* fallback */
+		 background-color: #84b818;
+		/* Safari 4-5, Chrome 1-9 */
+		background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#84b818),to(#2F2727));
+		/* Safari 5.1, Chrome 10+ */
+		background: -webkit-linear-gradient(top, #c2d44c, #84b818);
+		/* Firefox 3.6+ */
+		background: -moz-linear-gradient(top, #c2d44c, #84b818);
+		/* IE 10 */
+		background: -ms-linear-gradient(top, #c2d44c, #84b818);
+		/* Opera 11.10+ */
+		background: -o-linear-gradient(top, #c2d44c, #84b818);
 	}
 }
