@@ -17,18 +17,9 @@ public class StartView extends VerticalLayout implements View {
 	private Navigator navigator;
 
 	public StartView() {
-//		Button button = new Button("Go to Main View",
-//				new Button.ClickListener() {
-//					@Override
-//					public void buttonClick(ClickEvent event) {
-////						navigator.navigateTo(MAINVIE);
-//					}
-//				});
-		
 		LoginBox login = new LoginBox();
 		login.setNavigator(navigator);
 		addComponent(login);
-//		addComponent(button);
 		setComponentAlignment(login, Alignment.MIDDLE_CENTER);
 	}
 

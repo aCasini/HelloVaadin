@@ -28,8 +28,11 @@ public class LoginBox extends CustomComponent implements ClickListener{
 	
 	public LoginBox(){
 		FormLayout content = new FormLayout();
+		userName.setId("userNameTxt");
 		content.addComponent(userName);
+		passText.setId("passTxt");
 		content.addComponent(passText);
+		loginBtn.setId("loginBtn");
 		content.addComponent(loginBtn);
 		loginBtn.addClickListener(this);
 		panel.setContent(content);
